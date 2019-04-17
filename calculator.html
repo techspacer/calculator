@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Calculator</title>
+    <script type="text/javascript">
+      function displayresults(val)
+      {
+        document.getElementById("result").value+=val
+      }
+
+      function getresults()
+      {
+        let x = document.getElementById("result").value
+        let y = eval(x)
+        document.getElementById("result").value = y
+      }
+
+      function clearresults()
+      {
+        document.getElementById("result").value=""
+      }
+    </script>
+    <style>
+      input[type="button"]
+  		{
+  		background-color:gray;
+  		color: white;
+  		border: solid black 1px;
+  		width:100%
+  		}
+
+      input[type="text"]
+      {
+        background-color:white;
+        color: black;
+        border: solid black 1px;
+        width:100%
+      }
+
+    </style>
+  </head>
+  <body>
+<table border="1">
+<tr>
+  <td colspan="3"><input type="text" id="result"></td>
+  <td><input type="button" value="C" onclick="clearresults()"></td>
+</tr>
+<tr>
+  <td><input type="button" value="1" onclick="displayresults('1')"></td>
+  <td><input type="button" value="2" onclick="displayresults('2')"></td>
+  <td><input type="button" value="3" onclick="displayresults('3')"></td>
+  <td><input type="button" value="+" onclick="displayresults('+')"></td>
+</tr>
+<tr>
+  <td><input type="button" value="4" onclick="displayresults('4')"></td>
+  <td><input type="button" value="5" onclick="displayresults('5')"></td>
+  <td><input type="button" value="6" onclick="displayresults('6')"></td>
+  <td><input type="button" value="-" onclick="displayresults('-')"></td>
+</tr>
+<tr>
+  <td><input type="button" value="7" onclick="displayresults('7')"></td>
+  <td><input type="button" value="8" onclick="displayresults('8')"></td>
+  <td><input type="button" value="9" onclick="displayresults('9')"></td>
+  <td><input type="button" value="*" onclick="displayresults('*')"></td>
+</tr>
+<tr>
+  <td><input type="button" value="." onclick="displayresults('.')"></td>
+  <td><input type="button" value="0" onclick="displayresults('0')"></td>
+  <td><input type="button" value="=" onclick="getresults()"></td>
+  <td><input type="button" value="/" onclick="displayresults('/')"></td>
+</tr>
+</table>
+  </body>
+</html>
